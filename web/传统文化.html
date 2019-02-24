@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>传统文化</title>
+
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body id="yes">
+
+<main>
+   <section class="main">
+	  <div class="container mainContent">
+		<div class="zzsc">
+			<h1>中国传统文化的起源<span>文章内容大部分网络筛选</span></h1>
+		</div>
+		 <p>中国古籍中关于文化起源问题的说法多与氏族祖先的功德联系起来。中国古代文化著作多是经世致用的，对此问题虽有所论及，也多归于“圣人”，而不愿意追根究底。社会文化意识的核心乃是祖宗思想，即认祖宗而不信上帝。在古代希腊罗马时期，由于神学占着统治地位，所以文化的起源也多被归于神造。正是在劳动过程中，人类实现了手与脚的分工，头脑也发达了起来，同时产生了思维和表达这种思维的语言。正是劳动创造了人类自身，也是劳动使自然界的事物变成了为人类服务的对象。文化是人类在劳动中创造的，是人类认识自然界、改造自然界的同时，不断提高自身的思维能力，从而不断对外部世界各种事物进行价值思维肯定所创造的。 </p>
+
+		 <button class="about">关于中国艺术</button>
+	  </div>
+   </section>
+  </main>
+
+  <section class="aboutSection">
+   <div class="container aboutContent">
+
+	  <h1>我国的艺术</h1>
+		<p>分为：书法绘画、工艺美术、音乐、戏剧、歌舞、影视.....</p>
+		<button onclick="wenhua()">点击了解更多</button>
+		<button onclick="control()">返回主页</button>
+   </div>
+  </section>
+
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+	function control(){
+		window.location.href="../index.html";
+	}
+	function wenhua(){
+		window.location.href="https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD/106554?fr=aladdin#15_1";
+	}
+$(function () {
+	'use strict';
+	var main = $('.main'), about = $('.aboutSection');
+	$('.about').click(function () {
+		main.animate({
+			'height': '0',
+			'top': '50vh',
+			'padding': '0'
+		}, 300).animate({
+			'width': '2px',
+			'left': '50%'
+		}, 900).fadeOut(200, function () {
+			about.fadeIn(200);
+			about.animate({
+				'width': '100%',
+				'left': '0'
+			}, 900);
+			about.animate({
+				'min-height': '100vh',
+				'top': '0',
+				'padding-top': '50px',
+				'padding-bottom': '50px'
+			}, 300);
+		});
+	});
+	$('.home').click(function () {
+		about.animate({
+			'min-height': '0',
+			'height': '0',
+			'top': '50vh',
+			'padding': '0'
+		}, 300).animate({
+			'width': '2px',
+			'left': '50%'
+		}, 900).fadeOut(200, function () {
+			main.fadeIn(200).animate({
+				'width': '100%',
+				'left': '0'
+			}, 900).animate({
+				'height': '100vh',
+				'top': '0',
+				'padding-top': '100px',
+				'padding-bottom': '100px'
+			}, 300);
+		});
+	});
+});
+</script>
+</body>
+</html>
